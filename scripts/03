@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "\033[0;31mMASHINE HARDWARE:"
+lscpu
+echo "\033[32m TO THIS SYSTEM CONNECTED:"
+who
+echo "\x1B[37m USERS IN SYSTEM"
+cat /etc/passwd | grep /home/ | awk -F':' '{print $1}'
+echo "\x1B[33m SYSTEM VERSION:"
+cat /etc/issue
